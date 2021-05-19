@@ -1,6 +1,6 @@
 version: '3'
 
 services:
-  node-app:
-    container_name: node-app-dev
+  node-app-sample:
+    container_name: node-app-dev-sample
     command: yarn dev -L

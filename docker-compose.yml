@@ -1,21 +1,21 @@
 version: '3'
 
 services:
-  node-app:
+  node-app-sample:
     build: .
-    image: node-app
+    image: node-app-sample
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+      - MONGODB_URL=mongodb://mongodb-sample:27017/node-boilerplate
     ports:
       - '3000:3000'
     depends_on:
-      - mongodb
+      - mongodb-sample
     volumes:
       - .:/usr/src/node-app
     networks:
       - node-network
 
-  mongodb:
+  mongodb-sample:
     image: mongo:4.2.1-bionic
     ports:
       - '27017:27017'
